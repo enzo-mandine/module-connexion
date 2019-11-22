@@ -1,0 +1,147 @@
+/* index */
+
+#index_body {
+    margin: 0;
+    padding: 0;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    background-image: url("ressources/indexbg.png");
+    background-size: cover;
+}
+
+#index_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vh;
+    margin-top: 10vh;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+}
+
+#index_continue {
+    display: flex;
+    justify-content: center;
+}
+
+#index_footer {
+    position: absolute;
+    bottom: 0;
+    height: 5vh;
+    width: 75%;
+}
+
+#intro {
+    font-size: 18pt;
+    text-align: center;
+    text-justify: distribute;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* fin index */
+
+/* login */
+
+#fix_login_inscription {
+    width: 9vw;
+}
+
+#login_body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-image: url("ressources/indexbg.png");
+    background-size: cover;
+}
+
+#module_login {
+    border-radius: 10px;
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    width: 20vw;
+    height: 45vh;
+    padding-top: 10vh;
+}
+
+#userpic {
+    width: 150px;
+    height: 150px;
+    background-image: url("ressources/userpic.png");
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.alignh {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* fin login */
+
+/* inscription */
+
+#register_body {
+    margin: 0;
+    padding: 0;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    background-image: url("ressources/registerbg.jpg");
+    background-size: cover;
+}
+
+#register_main {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 25vh;
+    width: 30vw;
+    height: 45vh;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+.input_width {
+    width: 50vh;
+}
+
+#register_p {
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+#fix_inscription_inscription {
+    width: 100%;
+}
+/* fin inscription */
+/* profil */
+#profil_body {
+    margin: 0;
+    padding: 0;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    background-image: url("ressources/editprofil.jpg");
+    background-size: cover;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>module</title>
+</head>
+<!-- Voir Fonction INCLUDE & REQUIRE -->
+
+<body>
+    <main>
+        <p class="title">Bienvenue sur le site</p>
+
+        <!--Connexion-->
+        <section id="module_login">
+            <form method="POST" action="index.php">
+                <input name="login" type="texte" placeholder="login">
+                <br />
+                <input name="password" type="password" placeholder="password">
+                <br />
+                <input type="submit" value="connexion">
+            </form>
+        </section>
+
+        <!--Connexion error-->
+        <section id="module_login_error">
+            <form method="POST" action="index.php">
+                <input name="login" type="texte" placeholder="login ou">
+                <br />
+                <input name="password" type="password" placeholder="password inconnu :-(">
+                <br />
+                <input type="submit" value="réessayer">
+            </form>
+        </section>
+
+        <!--Inscription-->
+        <section id="module_signin">
+            <p>Tu veux faire partie de l'équipe ?<br />C'est par ici :</p>
+            <form method="POST" action="index.php">
+                <input name="nom" type="texte" placeholder="Dupont">
+                <br />
+                <input name="prenom" type="text" placeholder="Jean">
+                <br />
+                <input name="login" type="texte" placeholder="JDdu13">
+                <br />
+                <input name="password" type="password" placeholder="password">
+                <br />
+                <input name="passwordconfirm" type="password" placeholder="password">
+                <br />
+                <input type="submit" value="connexion">
+            </form>
+        </section>
+
+        <!--Edit Profile-->
+        <section id="module_edit_profile">
+            <form method="POST" action="index.php">
+                <p>Envie de changement ?<br />C'est par ici :</p>
+                <input name="nom" type="texte" placeholder="<?php $_POST['nom']?>">
+                <br />
+                <input name="prenom" type="text" placeholder="<?php $_POST['prenom']?>">
+                <br />
+                <input name="login" type="texte" placeholder="<?php $_POST['login']?>">
+                <br />
+                <input name="password" type="password" placeholder="<?php $_POST['password']?>">
+                <br />
+                <input name="passwordconfirm" type="password" placeholder="<?php $_POST['password']?>">
+                <br />
+                <input type="submit" value="valider">
+            </form>
+        </section>
+
+        <!--Admin-->
+        <?? VAR_DUMP ??>
+        <?? TABLE + VAR_DUMP ??>
+    </main>
+</body>
+
+</html>
