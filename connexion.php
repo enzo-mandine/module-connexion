@@ -9,7 +9,6 @@ if (isset($_POST["submit"])) {
     $request = "SELECT login, password FROM utilisateurs WHERE login = '" . $_POST["login"] . "'";
     $query = mysqli_query($connect, $request);
     $result = mysqli_fetch_all($query);
-    var_dump($result);
     if (($_POST["login"] == $result[0][0]) && password_verify($_POST["password"], $result[0][1])) {
         $_SESSION["isconnected"] = $_POST["login"];
         if ($_POST["login"] == $admin) {

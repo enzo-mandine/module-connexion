@@ -1,13 +1,9 @@
 <?php
-// connection au serveur//
+session_start();
 $login = mysqli_connect("localhost", "root", "", "moduleconnexion");
-// requete serveur //
 $request = "SELECT * FROM `utilisateurs`";
-// envoie de la query au serveur //
 $query = mysqli_query($login, $request);
-// récuperation des résultat du query //
 $result = mysqli_fetch_all($query);
-
 ?>
 
 <!DOCTYPE html>
@@ -22,26 +18,27 @@ $result = mysqli_fetch_all($query);
 </head>
 
 <body id="profil_body">
-    <main id="register_main">
+    <main id="admin_main">
         <section id="section_admin">
-            <table>
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>login</th>
-                        <th>prenom</th>
-                        <th>nom</th>
-                        <th>password</th>
+            <table class="border">
+                <thead class="border">
+                    <p id="intro">Liste des membres</p>
+                    <tr class="border">
+                        <th class="border">id</th>
+                        <th class="border">login</th>
+                        <th class="border">prenom</th>
+                        <th class="border">nom</th>
+                        <th class="border">password</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($result as $row) {
                         echo "<tr>";
-                        echo "<td>" . $row[0] . "</td>";
-                        echo "<td>" . $row[1] . "</td>";
-                        echo "<td>" . $row[2] . "</td>";
-                        echo "<td>" . $row[3] . "</td>";
-                        echo "<td>" . $row[4] . "</td>";
+                        echo "<td class='border'>" . $row[0] . "</td>";
+                        echo "<td class='border'>" . $row[1] . "</td>";
+                        echo "<td class='border'>" . $row[2] . "</td>";
+                        echo "<td class='border'>" . $row[3] . "</td>";
+                        echo "<td class='border'>" . $row[4] . "</td>";
                         echo "</tr>";
                     }
                     ?>

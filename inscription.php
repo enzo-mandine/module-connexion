@@ -46,15 +46,15 @@ if (isset($_POST["regsubmit"])) {
         <section id="module_signin">
             <p id="register_p">Tu veux faire partie de l'équipe ?<br />C'est par ici :</p>
             <form method="POST" action="inscription-.php">
-                <input class="alignh input_width" name="nom" type="texte" placeholder="Dupont">
+                <input class="alignh input_width" name="nom" type="texte" placeholder="Dupont" required>
                 <br />
-                <input class="alignh input_width" name="prenom" type="text" placeholder="Jean">
+                <input class="alignh input_width" name="prenom" type="text" placeholder="Jean" required>
                 <br />
-                <input class="alignh input_width" name="login" type="texte" placeholder="JDdu13">
+                <input class="alignh input_width" name="login" type="texte" placeholder="JDdu13" required>
                 <br />
-                <input class="alignh input_width" name="password" type="password" placeholder="password">
+                <input class="alignh input_width" name="password" type="password" placeholder="password" required>
                 <br />
-                <input class="alignh input_width" name="passwordconfirm" type="password" placeholder="password">
+                <input class="alignh input_width" name="passwordconfirm" type="password" placeholder="password" required>
                 <br />
                 <div class="alignh">
                     <input name="regsubmit" id="fix_inscription_inscription" class="alignh" type="submit" value="Inscription">

@@ -145,3 +145,23 @@ input {
     background-image: url("ressources/editprofil.jpg");
     background-size: cover;
 }
+/* admin */
+#admin_main {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 25vh;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.border {
+    border: 1px solid black;
+    padding: 5px;
+}
+/* fin admin */
