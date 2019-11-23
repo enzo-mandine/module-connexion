@@ -1,6 +1,7 @@
 <?php
 session_start();
 if (isset($_POST["submit"])) {
+    $admin = "admin";
     $connect = mysqli_connect("localhost", "root", "", "moduleconnexion");
     if (mysqli_connect_errno()) {
         echo "Failed to connect" . mysqli_connect_error();
@@ -11,7 +12,11 @@ if (isset($_POST["submit"])) {
     var_dump($result);
     if (($_POST["login"] == $result[0][0]) && password_verify($_POST["password"], $result[0][1])) {
         $_SESSION["isconnected"] = $_POST["login"];
-        header("location:index.php");
+        if ($_POST["login"] == $admin) {
+            header("location:admin.php");
+        } else {
+            header("location:index.php");
+        }
     } else {
         header("location:connexion.php");
         echo "<p>Failed to connect</p>";
