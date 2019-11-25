@@ -4,6 +4,9 @@ $login = mysqli_connect("localhost", "root", "", "moduleconnexion");
 $request = "SELECT * FROM `utilisateurs`";
 $query = mysqli_query($login, $request);
 $result = mysqli_fetch_all($query);
+if (isset($_POST["logout"])) {
+    session_destroy();
+}
 ?>
 
 <!DOCTYPE html>
@@ -44,6 +47,9 @@ $result = mysqli_fetch_all($query);
                     ?>
                 </tbody>
             </table>
+            <a href="index.php">
+                <input type="submit" name="logout" value="Deconnexion">
+            </a>
         </section>
     </main>
 </body>

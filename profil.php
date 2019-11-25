@@ -11,7 +11,7 @@ foreach ($result as $row)
             $editrequest = "UPDATE utilisateurs SET nom = '" . $_POST["nom"] . "', prenom = '" . $_POST["prenom"] . "', login = '" . $_POST["login"] . "', password = '" . password_hash($_POST["password"], PASSWORD_DEFAULT) . "' WHERE login = '".$row[1]."'";
             mysqli_query($login, $editrequest);
             mysqli_close($login);
-            header("location:profil.php");
+            header("location:userconnected.php");
 
         }
     }

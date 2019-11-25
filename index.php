@@ -12,23 +12,19 @@
 
 <body id="index_body">
     <main id="index_main">
-        <p id="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores unde, placeat aliquam ea esse
-            vitae ullam
-            sapiente! Libero consequatur ratione sequi, rem tenetur porro reprehenderit assumenda cum impedit harum
-            explicabo? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio, laboriosam asperiores rem alias
-            veniam repellat suscipit? Quidem culpa suscipit accusamus ipsum nulla aliquid fugiat! Cum repellendus
-            deleniti explicabo dolorem quaerat! Lorem ipsum dolor sit, amet consectetur adipisicing elit. In dolores
-            doloribus ad consequuntur iste, explicabo non vero aperiam cumque cum delectus laboriosam fugiat. Voluptatem
-            voluptatibus, repellendus fuga nostrum ipsa optio? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Ipsam, accusantium nostrum quibusdam minus tempore dolorem expedita voluptates repellat a laborum minima
-            vitae commodi magni esse laboriosam adipisci, iure, accusamus quam? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Placeat eum, reiciendis nam quam aliquam delectus veniam blanditiis, dolor, necessitatibus
-            perspiciatis odit beatae similique praesentium libero distinctio corrupti omnis hic tenetur! Lorem, ipsum
-            dolor sit amet consectetur adipisicing elit. Neque quae quidem odit asperiores natus magni possimus fugit
-            dolorem? Veritatis similique quis quo alias debitis nulla blanditiis nam doloribus hic? Aperiam. Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Facilis, nesciunt. Eaque eius eos a, quo inventore labore
-            excepturi porro deleniti accusamus laboriosam deserunt asperiores itaque architecto quia. Temporibus,
-            corrupti veniam!</p>
+        <p id="intro">Le premier restaurant de la chaîne est ouvert à Miami le 4 décembre 1954 sous le nom d'Insta Burger King par James McLamore et David Edgerton, deux étudiants de la School of Hotel Administration de l'Université Cornell. McLamore avait visité le restaurant appartenant aux frères Mc Donald à San Bernardino en Californie et, comprenant le potentiel d'un tel service de restauration, décidé d'en créer sa propre version. <br /><br />
+
+            L'expansion internationale commence en 1963 par San Juan, Puerto Rico.
+            En 1967, Burger King est achetée par la Pillsbury Company, elle-même rachetée par le britannique Grand Metropolitan en 1988.<br /><br />
+
+            <b>En 1969</b>, il ouvre son premier restaurant canadien à Windsor, Ontario.<br /><br />
+            <b>En 1989</b>, la franchise acquiert de nombreux points de vente de son rival britannique Wimpy quand sa société mère achète la marque à United Biscuits et l'intègre à Burger King, accentuant encore plus sa présence dans le pays. Alors que des restaurants Wimpy existent encore en 2010 (indépendamment de Burger King), ils n'ont plus la même présence que par le passé (le marché étant maintenant dominé par Burger King et surtout McDonald's).<br /><br />
+
+           <b>En 1997</b>, Grand Metropolitan fusionne avec Guinness pour former la compagnie Diageo.
+            En 2002, Burger King est racheté par les fonds de placements Texas Pacific, Bain Capital LLC et Goldman Sachs Capital qui ont acheté les trois quarts des actions pour 1,5 milliard de dollars américains.<br /><br />
+
+            <b>En 2010</b>, Burger King est no 3 de la restauration rapide aux États-Unis, derrière McDonald's et Wendy's. En septembre de la même année, la chaîne est achetée par le fonds américano-brésilien 3G Capital pour la somme de 4 milliards de dollars.<br /><br />
+            <a href="https://fr.wikipedia.org/wiki/Burger_King">Wikipedia</a></p>
         <div id="index_continue">
             <a href="connexion.php">
                 <input type="submit" value="Continuer">

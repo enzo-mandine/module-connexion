@@ -40,7 +40,7 @@ if (isset($_POST["regsubmit"])) {
     <main id="register_main">
         <section id="module_signin">
             <p id="register_p">Tu veux faire partie de l'équipe ?<br />C'est par ici :</p>
-            <form method="POST" action="inscription-.php">
+            <form method="POST" action="inscription.php">
                 <input class="alignh input_width" name="nom" type="texte" placeholder="Dupont" required>
                 <br />
                 <input class="alignh input_width" name="prenom" type="text" placeholder="Jean" required>
