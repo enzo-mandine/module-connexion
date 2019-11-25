@@ -5,12 +5,7 @@ if (isset($_POST["regsubmit"])) {
         $request = "SELECT * FROM `utilisateurs`";
         $query = mysqli_query($login, $request);
         $result = mysqli_fetch_all($query);
-        $connectstate = true;
-
-
-
-
-        
+        $connectstate = true;        
         $i = 0;
         while ($i < count($result)) {
             if ($result[$i][1] == $_POST["login"]) {

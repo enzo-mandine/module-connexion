@@ -14,7 +14,7 @@ if (isset($_POST["submit"])) {
         if ($_POST["login"] == $admin) {
             header("location:admin.php");
         } else {
-            header("location:index.php");
+            header("location:profil.php");
         }
     } else {
         header("location:connexion.php");
