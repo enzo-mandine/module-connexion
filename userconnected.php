@@ -1,7 +1,12 @@
 <?php
 session_start();
-if (isset($_POST["logout"])) {
+if (isset($_GET["logout"])) {
     session_destroy();
+    header("location:index.php");
+}
+if (!isset($_SESSION["isconnected"])) {
+    header("location:index.php");
+    die;
 }
 ?>
 
@@ -23,7 +28,7 @@ if (isset($_POST["logout"])) {
             <a href="profil.php">
                 <input type="submit" name="profil" value="Modifier son profil">
             </a>
-            <a href="index.php">
+            <a href="userconnected.php?logout=true">
                 <input type="submit" name="logout" value="Deconnexion">
             </a>
         </div>

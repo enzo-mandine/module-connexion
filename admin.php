@@ -1,5 +1,13 @@
 <?php
 session_start();
+if (!isset($_SESSION["isconnected"])) {
+    header("location:index.php");
+    die;
+}
+if (isset($_GET["logout"])) {
+    session_destroy();
+    header("location:index.php");
+}
 $login = mysqli_connect("localhost", "root", "", "moduleconnexion");
 $request = "SELECT * FROM `utilisateurs`";
 $query = mysqli_query($login, $request);
@@ -47,7 +55,7 @@ if (isset($_POST["logout"])) {
                     ?>
                 </tbody>
             </table>
-            <a href="index.php">
+            <a href="admin.php?logout=true">
                 <input type="submit" name="logout" value="Deconnexion">
             </a>
         </section>

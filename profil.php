@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["isconnected"])) {
+    header("location:index.php");
+    die;
+}
 $login = mysqli_connect("localhost", "root", "", "moduleconnexion");
 $request = "SELECT * FROM `utilisateurs`WHERE login = '" . $_SESSION["isconnected"] . "'";
 $query = mysqli_query($login, $request);
@@ -8,11 +12,10 @@ foreach ($result as $row)
 
     if (isset($_POST["submit"])) {
         if ($_POST["password"] == $_POST["passwordconfirm"]) {
-            $editrequest = "UPDATE utilisateurs SET nom = '" . $_POST["nom"] . "', prenom = '" . $_POST["prenom"] . "', login = '" . $_POST["login"] . "', password = '" . password_hash($_POST["password"], PASSWORD_DEFAULT) . "' WHERE login = '".$row[1]."'";
+            $editrequest = "UPDATE utilisateurs SET nom = '" . $_POST["nom"] . "', prenom = '" . $_POST["prenom"] . "', login = '" . $_POST["login"] . "', password = '" . password_hash($_POST["password"], PASSWORD_DEFAULT) . "' WHERE login = '" . $row[1] . "'";
             mysqli_query($login, $editrequest);
             mysqli_close($login);
             header("location:userconnected.php");
-
         }
     }
 ?>

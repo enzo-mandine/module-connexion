@@ -55,7 +55,7 @@ if (isset($_POST["submit"])) {
         </div>
         <?php if (isset($_POST["submit"])) {
             if (!isset($result[0]) || ($_POST["login"] != $result[0][0]) && !password_verify($_POST["password"], $result[0][1])) {
-                echo "<p class='aligncenter'>Erreur de mot de passe / password</p>";
+                echo "<p class='aligncenter'>Erreur de login / password</p>";
             }
         }
         ?>
