@@ -1,4 +1,9 @@
 <?php
+if (!isset($_SESSION)) {
+    header("location:index.php");
+    die;
+}
+
 session_start();
 $login = mysqli_connect("localhost", "root", "", "moduleconnexion");
 $request = "SELECT * FROM `utilisateurs`WHERE login = '" . $_SESSION["isconnected"] . "'";

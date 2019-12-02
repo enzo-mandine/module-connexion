@@ -9,16 +9,15 @@ if (isset($_POST["submit"])) {
     $request = "SELECT login, password FROM utilisateurs WHERE login = '" . $_POST["login"] . "'";
     $query = mysqli_query($connect, $request);
     $result = mysqli_fetch_all($query);
-    if (($_POST["login"] == $result[0][0]) && password_verify($_POST["password"], $result[0][1])) {
+    $password_state = "Password";
+    $login_state = "Login";
+    if (isset($result[0]) && ($_POST["login"] == $result[0][0]) && password_verify($_POST["password"], $result[0][1])) {
         $_SESSION["isconnected"] = $_POST["login"];
         if ($_POST["login"] == $admin) {
             header("location:admin.php");
         } else {
             header("location:userconnected.php");
         }
-    } else {
-        header("location:connexion.php");
-        echo "<p>Failed to connect</p>";
     }
 }
 ?>
@@ -41,9 +40,9 @@ if (isset($_POST["submit"])) {
         </div>
         <div class="alignh">
             <form class="alignv" method="POST" action="connexion.php">
-                <input name="login" type="texte" placeholder="login" required>
+                <input required name="login" type="texte" placeholder="Login">
                 <br />
-                <input name="password" type="password" placeholder="password" required>
+                <input required name="password" type="password" placeholder="Password">
                 <br />
                 <input name="submit" type="submit" value="connexion">
                 <br />
@@ -54,6 +53,12 @@ if (isset($_POST["submit"])) {
                 <input id="fix_login_inscription" type="submit" value="inscription">
             </a>
         </div>
+        <?php if (isset($_POST["submit"])) {
+            if (!isset($result[0]) || ($_POST["login"] != $result[0][0]) && !password_verify($_POST["password"], $result[0][1])) {
+                echo "<p class='aligncenter'>Erreur de mot de passe / password</p>";
+            }
+        }
+        ?>
     </section>
 </body>
 <footer id="index_footer">
